@@ -8,31 +8,31 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="header"> <!-- content header-->
-		
-		<div class="header_menu"> <!--content menu-->
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Product</a></li>
-			</ul>
-		</div><!-- Finish content menu-->
+    <header>
+        <nav class="navbar">
+            <ul class="nav-left">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Product▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">ALL</a></li>
+                        <li><a href="#">T-Shirt</a></li>
+                        <li><a href="#">Short</a></li>
+                    </ul>
+                </li>
+            </ul>
 
-		<div class="header_logo">
-			<a href="#"><img src="img/logoThuongHieu.jpg" alt="SLMRO"></a>
-		</div>
-
-		<div class="header_menu">
-			<ul>
-				<li><a href="">Search</a></li>
-				<li><a href="">Login</a></li>
-				<li><a href="">Bag</a></li>
-			</ul>			
-		</div>
-
-	</div> <!--Finish header-->
-
-    
-
+            <div class="logo">
+                <img src="img/logoThuongHieu.jpg" alt="">
+            </div>
+            
+            <div class="nav-right">
+                <input type="text" placeholder="Search..." class="search-box">
+                <a href="./login.html">Login</a>
+                <a href="#">Bag</a>
+            </div>
+        </nav>
+    </header>  
     <div class="form">
 		<div>
 			<h2>ĐĂNG NHẬP</h2>
@@ -40,14 +40,14 @@
 
 		<div>
 			<form action="" method="">
-				<input type="text" name="username"> <br> <br>
-				<input type="password" name="password"> <br> <br>
-				<input type="submit" value="login"> <br> <br>
+				<input type="text" placeholder="Username" name="username"> <br> <br>
+				<input type="password" placeholder="Password" name="password"> <br> <br>
+				<input type="submit" value="Login"> <br> <br>
 			</form>
 		</div>
         <div class="form_text">
-			<a href="">TRỜ VỀ</a><br> <br>
-			<a href="">ĐĂNG KÝ</a><br> <br>
+			<a href="index.html">TRỜ VỀ</a><br> <br>
+			<a href="register.html">ĐĂNG KÝ</a><br> <br>
 			<a href="">QUÊN MẬT KHẨU?</a> <br>
 		</div>
     </div>
