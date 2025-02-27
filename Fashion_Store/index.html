@@ -37,8 +37,74 @@
 		<img src="img/home.jpg">
 	</div>
 
-    
-   
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!--Footer -->
+ <div class="footer">
+    <div class="footer_text">
+        <ul>
+            <li>Phone : 0913538249</li>
+            <li>Address : 68 Bui Vien Street, Pham Ngu Lao Ward, District 1, Ho Chi Minh City</li>
+            <li>Copyright - Vietnamese Brand.</li>
+        </ul>
+    </div>
+
+    <div>
+        <div class="footer_img">
+            <a href="#"><img src="img/facebook_1.png" /></a>
+            <a href="#"><img src="img/link_xahoi.png" /></a>
+            <a href="#"><img src="img/Twiter.png" /></a>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const dropdownToggle = document.querySelector(".dropdown-toggle");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    dropdownToggle.addEventListener("click", function (event) {
+        event.preventDefault();
+        dropdownMenu.classList.toggle("show");
+    });
+
+    // Ẩn menu khi click ra ngoài
+    document.addEventListener("click", function (event) {
+        if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove("show");
+        }
+    });
+});
+</script>
 </body>
 </html>

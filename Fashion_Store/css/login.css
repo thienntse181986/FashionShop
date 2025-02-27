@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #FCF6E6;
 }
 
 .navbar {
@@ -25,7 +26,8 @@ body {
 }
 
 .logo img{
-    width: 300px;
+    width: 250px;
+    padding-left: 100px;
 }
 
 .search-box {
@@ -33,13 +35,21 @@ body {
     margin-right: 10px;
 }
 
+.dropdown-menu li{
+    padding: 5px 0 5px 0;
+}
+
 .dropdown-menu {
     display: none;
     position: absolute;
-    background: white;
+    background-color: white;
     list-style: none;
-    padding: 5px;
-    margin-top: 5px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu.show {
+    display: block;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -57,133 +67,68 @@ body {
     color: black;
 }
 
-@keyframes growth{
-    from{
-        transform: scale(var(--growth-from));
-    }
-    to {
-        transform: scale(var(--growth-to));
-    }
+.form2 input{
+    width: 450px;
+    height: 30px;
+    font-size: 15px;
 }
 
-.modal{
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.buttonLogin {
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
     display: flex;
-    animation: fadeIn linear 0.1s;
-}
-
-.modal__overlay{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal__body{
-    --growth-from: 0.7;
-    --growth-to: 1;
-    background-color: whitesmoke;
-    margin: auto;
-    position: relative;
-    z-index: 1;
-    border-radius: 5px;
-    animation: growth linear 0.1s;
-}
-
-.auth-form{
-    width: 500px;
-    border-radius: 5px;
-    background-color: var(--white-color);
-}
-
-.auth-form__container{
-    padding: 0 32px;
-}
-
-.auth-form__header{
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 12px;
-    margin-top: 10px;
+    background-color: #64584A;
+    padding: 33px;
 }
 
-.auth-form__heading{
-    font-size: 2.2rem;
-    font-weight: 400;
-    color: var(--text-color);
+.footer_text ul{
+    list-style: none;
 }
 
-.auth-form__switch-btn{
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: var(--primary-color);
-    cursor: pointer;
+.footer_text ul li{
+    padding: 10px 0 10px 0;
+    color: white;
 }
 
-.auth-form__form{
-    
+.footer_img{
+    padding-right: 250px;
+    padding-top: 40px;
 }
 
-.auth-form__input{
-    width: 100%;
-    height: 40px;
-    margin-top: 16px;
-    padding: 0 12px;
-    border-radius: 2px;    
-    border: 1px solid;
-    outline: none;
+.footer_img a{
+    padding-left: 5px;
 }
-
-.auth-form__input:focus{
-    border-color: #888;
-}
-
-.auth-form_controls{
-    margin-top: 16px;
-}
-
-.auth-form__switch-btn{
-    color: var(--primary-color);
-}
-
-.auth-form_controls{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 80px;
-}
-
-.btn{
-    min-width: 142px;
-    height: 34px;
-    text-decoration: none;
-    border: none;
-    border-radius: 2px;
-    padding: 0;
-    outline: none;
-    cursor: pointer;
-    color: var(--text-color);
-}
-
-.btn :hover{
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.btn.btn--primary{
-    background-color: orange;
-    line-height: 1.6rem;
-}
-
-.auth-form_controls-back{
-    margin-right: 8px;
-}
-
-.auth-form__help{
-    display: flex;
-    justify-content: flex-end;
-}
-
