@@ -12,17 +12,17 @@ package user;
 public class UserDTO {
     private String username;
     private String password;
-    private String email;
     private String fullName;
+    private String phone;
 
     public UserDTO() {
     }
 
-    public UserDTO(String username, String password, String email, String fullName) {
+    public UserDTO(String username, String password, String fullName, String phone) {
         this.username = username;
         this.password = password;
-        this.email = email;
         this.fullName = fullName;
+        this.phone = phone;
     }
 
     public String getUsername() {
@@ -41,14 +41,6 @@ public class UserDTO {
         this.password = password;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getFullName() {
         return fullName;
     }
@@ -57,10 +49,19 @@ public class UserDTO {
         this.fullName = fullName;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     @Override
     public String toString() {
-        return "UserDTO{" + "username=" + username + ", password=" + password + ", email=" + email + ", fullName=" + fullName + '}';
+        return "UserDTO{" + "username=" + username + ", password=" + password + ", fullName=" + fullName + ", phone=" + phone + '}';
     }
+   
 
 
 }

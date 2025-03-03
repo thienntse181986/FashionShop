@@ -51,12 +51,24 @@
 			</form>
 		</div>
         <div class="form_text">
-			<a href="index.html">TR? V?</a><br> <br>
+			<a href="index.html">Return</a><br> <br>
 		</div>
     </div>
 
 
-
+<div id="cart" class="cart">
+        <div class="cart-content">
+            <span class="close-btn">&times;</span>
+            <h2>Your Bag</h2>
+            <div class="cart-items">
+                <p>Giỏ hàng của bạn đang trống</p>
+            </div>
+            <div class="cart-footer">
+                <p>Subtotal: <span id="subtotal">0₫</span></p>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -121,6 +133,31 @@
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+        const cart = document.getElementById("cart");
+        const bagButton = document.querySelector(".nav-right a[href='#']");
+        const closeButton = document.querySelector(".close-btn");
+
+        // Khi bấm vào "Bag", giỏ hàng hiện ra
+        bagButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            cart.classList.add("show");
+        });
+
+        // Khi bấm nút "X", giỏ hàng ẩn đi
+        closeButton.addEventListener("click", function () {
+            cart.classList.remove("show");
+        });
+
+        // Bấm ra ngoài thì ẩn giỏ hàng
+        document.addEventListener("click", function (event) {
+            if (!cart.contains(event.target) && !bagButton.contains(event.target)) {
+                cart.classList.remove("show");
+            }
+        });
+    });
 </script>
 </body>
 </html>

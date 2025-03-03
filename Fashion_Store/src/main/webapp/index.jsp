@@ -1,3 +1,4 @@
+<%@page import="user.UserDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -34,14 +35,30 @@
             </div>
         </nav>
     </header>
-    
+    <div>
+    <% if (session.getAttribute("usersession") != null) { %>
+    <p>Login user: <%= ((UserDTO) session.getAttribute("usersession")).getUsername() %></p>
+    <% } %>
+    </div>
+ 
     <div class="img_home">	<!--Img Home-->
 		<img src="img/home.jpg">
 	</div>
 
-
-
-
+      <div id="cart" class="cart">
+    <div class="cart-content">
+        <span class="close-btn">&times;</span>
+        <h2>Your Bag</h2>
+        <div class="cart-items">
+            <p>Giỏ hàng của bạn đang trống</p>
+        </div>
+        <div class="cart-footer">
+            <p>Subtotal: <span id="subtotal">0₫</span></p>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+</div>
+   
 
 
 
@@ -100,13 +117,38 @@
         dropdownMenu.classList.toggle("show");
     });
 
-    // áº¨n menu khi click ra ngoÃ i
+    // Ẩn menu khi click ra ngoài
     document.addEventListener("click", function (event) {
         if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
             dropdownMenu.classList.remove("show");
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+        const cart = document.getElementById("cart");
+        const bagButton = document.querySelector(".nav-right a[href='#']");
+        const closeButton = document.querySelector(".close-btn");
+
+        // Khi bấm vào "Bag", giỏ hàng hiện ra
+        bagButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            cart.classList.add("show");
+        });
+
+        // Khi bấm nút "X", giỏ hàng ẩn đi
+        closeButton.addEventListener("click", function () {
+            cart.classList.remove("show");
+        });
+
+        // Bấm ra ngoài thì ẩn giỏ hàng
+        document.addEventListener("click", function (event) {
+            if (!cart.contains(event.target) && !bagButton.contains(event.target)) {
+                cart.classList.remove("show");
+            }
+        });
+    });
 </script>
 </body>
 </html>

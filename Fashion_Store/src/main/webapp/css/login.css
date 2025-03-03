@@ -79,6 +79,51 @@ body {
 }
 
 
+/* Style cho giỏ hàng */
+.cart {
+    position: fixed;
+    top: 0;
+    right: -350px; /* Ban đầu ẩn */
+    width: 300px;
+    height: 100%;
+    background: #8B0000;
+    color: white;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.cart.show {
+    right: 0; /* Hiển thị giỏ hàng */
+}
+
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.cart-footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+.checkout-btn {
+    background: white;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
 
 
 

@@ -1,4 +1,5 @@
 user\UserDAO.class
-controller\LonginController.class
 user\UserDTO.class
+controller\LoginController.class
+controller\RegisterController.class
 utils\DBUtils.class

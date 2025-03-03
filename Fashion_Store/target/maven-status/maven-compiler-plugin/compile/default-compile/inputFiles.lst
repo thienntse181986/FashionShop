@@ -1,4 +1,5 @@
-D:\fashion_store\src\main\java\user\UserDAO.java
-D:\fashion_store\src\main\java\controller\LonginController.java
-D:\fashion_store\src\main\java\user\UserDTO.java
-D:\fashion_store\src\main\java\utils\DBUtils.java
+D:\PRJ301\fashion_store\src\main\java\controller\LoginController.java
+D:\PRJ301\fashion_store\src\main\java\user\UserDTO.java
+D:\PRJ301\fashion_store\src\main\java\controller\RegisterController.java
+D:\PRJ301\fashion_store\src\main\java\utils\DBUtils.java
+D:\PRJ301\fashion_store\src\main\java\user\UserDAO.java
