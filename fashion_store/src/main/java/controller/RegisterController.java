@@ -32,14 +32,13 @@ public class RegisterController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        String fullName = request.getParameter("fullName");
         String phone = request.getParameter("phone");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String repeatPass = request.getParameter("repeatPass");
-        
+              
         if (username == null || username.trim().isEmpty() || password == null || password.trim().isEmpty()
-            || fullName == null || fullName.trim().isEmpty() || phone == null || phone.trim().isEmpty()) {
+            || phone == null || phone.trim().isEmpty()) {
                 request.setAttribute("error", "Cannot be empty!");
                 request.getRequestDispatcher("/register.jsp").forward(request, response);
                 return;
@@ -52,14 +51,13 @@ public class RegisterController extends HttpServlet {
             UserDAO dao = new UserDAO();
             UserDTO user = dao.checkUsername(username);
             if(user == null) {
-                dao.register(fullName, phone, username, password);
+                dao.register(phone, username, password);
                 response.sendRedirect("login.jsp");
             }else {
                 request.setAttribute("error", "Username already exists!");
                 request.getRequestDispatcher("register.jsp").forward(request, response);
             }
         }
-        
     } 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

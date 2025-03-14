@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FCF6E6;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-left li a, .nav-right a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black
+}
+
+.logo img{
+    width: 250px;
+    padding-left: 100px;
+}
+
+.search-box {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.dropdown-menu li{
+    padding: 5px 0 5px 0;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    list-style: none;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.product-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    margin-left: 160px;
+}
+
+.product-image img {
+    width: 600px;
+    border-radius: 5px;
+}
+.product-details {
+    margin-left: 30px;
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.price {
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+.sizes label {
+    display: block;
+    margin: 10px 0;
+}
+.size {
+    padding: 8px 15px;
+    border: 1px solid #000;
+    margin-right: 5px;
+    background: white;
+    cursor: pointer;
+}
+.add-to-cart {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background: darkred;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.description {
+    margin-top: 20px;
+}
+
+.size-options {
+    display: flex; /* Sắp xếp các phần tử con theo hàng ngang */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #64584A;
+    padding: 33px;
+}
+
+.footer_text ul{
+    list-style: none;
+}
+
+.footer_text ul li{
+    padding: 10px 0 10px 0;
+    color: white;
+}
+
+.footer_img{
+    padding-right: 250px;
+    padding-top: 40px;
+}
+
+.footer_img a{
+    padding-left: 5px;
+}

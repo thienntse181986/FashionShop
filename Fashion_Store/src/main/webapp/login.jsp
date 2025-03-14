@@ -1,3 +1,4 @@
+<%@page import="user.UserDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -15,11 +16,10 @@
                 <ul class="nav-left">
                     <li><a href="index.jsp">Home</a></li>
                     <li class="dropdown">
-                        <a href="#">Product</a>
+                        <a href="./product?action=all">Product▼</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">ALL</a></li>
-                            <li><a href="t-shirt.jsp">T-Shirt</a></li>
-                            <li><a href="#">Short</a></li>
+                            <li><a href="./product?categoryID=1">T-Shirt</a></li>
+                            <li><a href="./product?categoryID=2">Shorts</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -30,11 +30,17 @@
 
                 <div class="nav-right">
                     <input type="text" placeholder="Search..." class="search-box">
-                    <a href="./login.jsp">Login</a>
-                    <a href="#">Bag</a>
+                    <% if (session.getAttribute("usersession") != null) {%>
+                    <span><a href="order?action=orderHistory">👤 <%= ((UserDTO) session.getAttribute("usersession")).getUsername()%></a></span>
+                    <a href="./login?action=logout">Logout</a>
+                    <% } else { %>
+                    <a href="./login">Login</a>
+                    <% } %>
+                    <a href="cart.jsp">Bag</a>
                 </div>
             </nav>
-        </header>  
+        </header>
+        
         <div class="form">
             <div>
                 <h2>LOGIN</h2>
@@ -62,20 +68,7 @@
 
 
 
-<div id="cart" class="cart">
-        <div class="cart-content">
-            <span class="close-btn">&times;</span>
-            <h2>Your Bag</h2>
-            <div class="cart-items">
-                <p>Giỏ hàng của bạn đang trống</p>
-            </div>
-            <div class="cart-footer">
-                <p>Subtotal: <span id="subtotal">0₫</span></p>
-                <button class="checkout-btn">Checkout</button>
-            </div>
-        </div>
-    </div>
-                
+   
                 
                 
                 
